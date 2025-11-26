@@ -35,7 +35,10 @@ def signup(user: UserCreate, db: Session = Depends(get_db)):
 def login(user: UserLogin, db: Session = Depends(get_db)):
     db_user = db.query(models.User).filter(models.User.email == user.email).first()
     if not db_user or not verify_password(user.password , db_user.password):
-        return {"error":"sahi dalo bahi"}
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid email or password"
+        )
 
     token = create_access_token({"id" : db_user.id , "email" : db_user.email} )
     return {"access_token" : token , "role" : db_user.role}

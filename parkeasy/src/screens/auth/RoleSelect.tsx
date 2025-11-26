@@ -29,7 +29,7 @@ const RoleSelect = ({navigation} : any) => {
 
         <Button title='Continue' 
             styleButton = {{marginTop: 30 , width: 150 }}
-            onPress = {() => navigation.navigate('Home')}
+            onPress = {() => navigation.navigate('Signup' , {role})}
            />
 
     </View>

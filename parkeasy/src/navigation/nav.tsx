@@ -17,10 +17,18 @@ const Nav = () => {
 
     <Stack.Navigator initialRouteName='Splash'>
 
-        <Stack.Screen name = 'Splash' component= {Splash}/>
+        <Stack.Screen 
+        name = 'Splash' 
+        component= {Splash}
+        options={{ headerShown: false }}
+        />
+
         <Stack.Screen name = 'Login' component={Login}/>
+
         <Stack.Screen name = 'Signup' component={Signup}/>
+
         <Stack.Screen name= 'RoleSelect' component = { RoleSelect}/>
+        
         <Stack.Screen name = 'Home' component = {HomeScreen}/>
 
     </Stack.Navigator>
