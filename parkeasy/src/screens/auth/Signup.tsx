@@ -4,6 +4,7 @@ import Input from '../../components/common/Input'
 import Button from '../../components/common/Button'
 import {signup} from '../../services/auth'
 import { useState } from 'react'
+import { colors } from '../../theme/color'
 
 
 
@@ -50,6 +51,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 20,
     gap: 20,
+    backgroundColor : colors.bg,
     flexDirection: 'column'
   }
 })

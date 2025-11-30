@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Input from '../../components/common/Input'
 import Button from '../../components/common/Button'
 import { login } from '../../services/auth'
+import { colors } from '../../theme/color'
 
 
 
@@ -21,7 +22,7 @@ const Login = ({navigation } : any) => {
        const res = await login(email , password);
        console.log("Login Successful" , res)
        Alert.alert("Success", "Logged in successfully!");
-       navigation.navigate("Home");
+       navigation.navigate("DriverTabs");
     }
     catch(error : any){
       console.log("Login error" , error);
@@ -47,6 +48,7 @@ export default Login
 const styles = StyleSheet.create({
   screen:{
     flex: 1,
+    backgroundColor :colors.bg,
     alignContent: 'center',
     justifyContent: 'center',
     paddingHorizontal: 20,

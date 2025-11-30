@@ -12,7 +12,9 @@ const Splash = ({navigation} : any) => {
       <Text style = {styles.text}>
         ＰａｒｋＥａｓｙ
       </Text>
-      <Button title = 'Start' onPress = {()=> navigation.navigate('Login')} ></Button>
+      <Button title = 'Start' onPress = {()=> navigation.navigate('Login')}
+         styleButton ={styles.button }
+       ></Button>
     </View>
   )
 }
@@ -25,11 +27,16 @@ const styles = StyleSheet.create({
         height: '100%',
         resizeMode: 'cover',
         position: 'absolute'
-    }
-    ,text :{
-        marginHorizontal: 85,
-        paddingTop: 270,
-        fontSize: 30,
+    },
+    button:{
+        width : '70%',
+        marginHorizontal : 60
+    },
+    text :{
+        textAlign: 'center',
+        paddingTop: 90,
+        marginBottom: 600,
+        fontSize: 50,
         fontWeight: 'bold',
         color: '#000',
     }

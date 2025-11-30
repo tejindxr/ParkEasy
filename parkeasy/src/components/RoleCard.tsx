@@ -21,7 +21,7 @@ export default RoleCard
 const styles = StyleSheet.create({
   card: {
 
-    backgroundColor: colors.card ,
+    backgroundColor: colors.lightPrimary ,
     width : 250,
     height : 200,
     padding: 20,
